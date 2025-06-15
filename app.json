@@ -9,14 +9,20 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.healthadvisor",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "useNextNotificationsApi": true,
+      "package": "com.yourcompany.healthadvisor"
     },
     "web": {
       "bundler": "metro",
@@ -25,6 +31,7 @@
     },
     "plugins": [
       "expo-router",
+      "expo-notifications",
       [
         "expo-splash-screen",
         {
@@ -37,6 +44,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "notification": {
+      "vapidPublicKey": "YOUR_PUBLIC_VAPID_KEY_HERE"
     }
   }
 }
